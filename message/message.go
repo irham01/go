@@ -14,9 +14,9 @@ import (
 
 // Config
 var (
-	prefix = "!"
-	self   = true
-	owner  = "6281236031617"
+	prefix = "."
+	self   = false
+	owner  = "6285601517617"
 )
 
 func Msg(client *whatsmeow.Client, msg *events.Message) {
@@ -49,8 +49,8 @@ func Msg(client *whatsmeow.Client, msg *events.Message) {
 				},
 			},
 		}
-		simp.SendHydratedBtn(from, helper.Menu(pushName, prefix), "Author : Vnia\nLibrary : Whatsmeow", buttons)
+		simp.SendHydratedBtn(from, helper.Menu(pushName, prefix), "Author : Irham\nLibrary : Whatsmeow", buttons)
 	case prefix + "owner":
-		simp.SendContact(from, owner, "vnia")
+		simp.SendContact(from, owner, "Irham")
 	}
 }
